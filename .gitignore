@@ -38,3 +38,6 @@ var/
 
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
+
+# pyenv version
+.python-version
