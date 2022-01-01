@@ -41,3 +41,6 @@ var/
 
 # pyenv version
 .python-version
+
+# log outputs
+outputs/
