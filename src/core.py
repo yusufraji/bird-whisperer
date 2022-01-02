@@ -9,14 +9,16 @@ raji.yusuf2342@gmail.com
 """
 import logging as log
 
+
 def main():
     # TODO:
     # run its processes
     pass
 
+
 if __name__ == "__main__":
-    log.basicConfig(level=log.DEBUG,
-                    format='%(asctime)s %(message)s',
-                    datefmt="%b %d %H:%M:%S %Z")
+    log.basicConfig(
+        level=log.DEBUG, format="%(asctime)s %(message)s", datefmt="%b %d %H:%M:%S %Z"
+    )
 
     main()

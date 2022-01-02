@@ -5,7 +5,7 @@ paths:
     val: ${hydra:runtime.cwd}/data/external/valid
     test: ${hydra:runtime.cwd}/data/external/test
 params:
-  epochs: 1
+  epochs: 10
   seed: 42
   train_loader:
     batch_size: 32
@@ -27,6 +27,7 @@ params:
     drop_last: False
   model:
     name: swin_tiny_patch4_window7_224
+    path: ${hydra:runtime.cwd}/models
     output_dim: 1
   optimizer:
     name: optim.AdamW

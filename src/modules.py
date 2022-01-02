@@ -71,7 +71,7 @@ class BirdSpeciesModule(LightningModule):
         features = self.backbone(x)
         features = features.view(features.size(0), -1)
         out = self.head(features)
-        # out = F.log_softmax(out, dim=1)
+        out = F.log_softmax(out, dim=1)
         return out
 
     def training_step(self, batch, batch_idx):
@@ -101,7 +101,7 @@ class BirdSpeciesModule(LightningModule):
     def test_step(self, batch, batch_idx):
         x, y = batch
         y_hat = self(x)
-        loss = self.criterion(y, y_hat)
+        loss = self.criterion(y_hat, y)
 
         preds = torch.argmax(y_hat, dim=1)
         acc = accuracy(preds, y)

@@ -26,6 +26,7 @@ class Loader:
 @dataclass
 class Model:
     name: str
+    path: str
     output_dim: int
 
 

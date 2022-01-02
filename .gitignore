@@ -44,3 +44,5 @@ var/
 
 # log outputs
 outputs/
+
+models/
